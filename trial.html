@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            height: 200px;
+            width: 200px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    
+
+    <div class="bata todo yes"></div>
+
+    <script>
+
+        
+        let tasks=[1,2,3];
+        console.log(tasks);
+        let removedElement=1;
+        let newTasks= tasks.filter((element)=>{
+        return element!=removedElement;
+    })
+    console.log(newTasks);
+    </script>
+</body>
+</html>
