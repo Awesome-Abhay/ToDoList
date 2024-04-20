@@ -63,3 +63,7 @@ main{
 i:hover{
     transform: scale(1.2);
 }
+.highlight{
+    box-shadow: 0px 0px 10px black;
+    transform: scale(1.01);
+}

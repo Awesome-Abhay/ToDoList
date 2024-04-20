@@ -111,10 +111,9 @@ function search(value){
         if(e.firstElementChild.textContent.trim()==value){
             doneTask(e);
             e.scrollIntoView();
+            e.classList.add("highlight");
         }
     })
-    
-    
 }
 // localStorage.removeItem("done");
 // localStorage.removeItem("tasks");
