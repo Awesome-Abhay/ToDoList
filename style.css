@@ -18,8 +18,10 @@ main{
     width: 100vw;
     background-color: #1B9CFC;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 5px;
 }
 .box{
     height: 600px;
@@ -66,4 +68,18 @@ i:hover{
 .highlight{
     box-shadow: 0px 0px 10px black;
     transform: scale(1.01);
+}
+.clearTasks{
+    position: absolute;
+    left: 40px;
+    height: 30px;
+    width: 100px;
+    top: 30px;
+}
+.clearDones{
+    position: absolute;
+    right: 40px;
+    height: 30px;
+    width: 100px;
+    top: 30px;
 }

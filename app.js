@@ -115,5 +115,14 @@ function search(value){
         }
     })
 }
-// localStorage.removeItem("done");
-// localStorage.removeItem("tasks");
+
+document.querySelector(".clearTasks").addEventListener("click",()=>{
+    localStorage.removeItem("tasks");
+    location.reload();
+})
+
+document.querySelector(".clearDones").addEventListener("click",()=>{
+    localStorage.removeItem("done");
+    location.reload();
+})
+
