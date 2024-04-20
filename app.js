@@ -1,9 +1,9 @@
-document.querySelector("input").addEventListener('keyup', (e) => {
+document.querySelector(".addTask").addEventListener('keyup', (e) => {
 
     if (e.key == "Enter") {
-        let value = document.querySelector("input").value.trim();
+        let value = document.querySelector(".addTask").value.trim();
         if (value.length != 0) {
-            document.querySelector("input").value = "";
+            document.querySelector(".addTask").value = "";
             updateTodo(value);
         }
     }
@@ -18,8 +18,10 @@ function updateTodo(value) {
         if(e==value)
             checkContain=true;
     })
-    if(checkContain)
+    if(checkContain){
+        alert("This is already added");
         return;
+    }
 
     let div = document.createElement("div");
     div.innerHTML = `
@@ -92,5 +94,27 @@ function updateDones(element){
     
 }
 
+document.querySelector(".searchbox").addEventListener('keyup', (e)=>{
+    if (e.key == "Enter") {
+        let value = document.querySelector(".searchbox").value.trim();
+        if (value.length != 0) {
+            document.querySelector(".searchbox").value = "";
+            search(value);
+        }
+    }
+})
+
+function search(value){
+    let todoNodeList= document.querySelectorAll(".todos");
+    let todos= Array.from(todoNodeList);
+    todos.forEach((e)=>{
+        if(e.firstElementChild.textContent.trim()==value){
+            doneTask(e);
+            e.scrollIntoView();
+        }
+    })
+    
+    
+}
 // localStorage.removeItem("done");
 // localStorage.removeItem("tasks");
