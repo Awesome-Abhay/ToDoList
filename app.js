@@ -125,4 +125,3 @@ document.querySelector(".clearDones").addEventListener("click",()=>{
     localStorage.removeItem("done");
     location.reload();
 })
-
